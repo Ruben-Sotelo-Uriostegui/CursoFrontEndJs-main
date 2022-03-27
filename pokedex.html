@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" href="img/pokeball.png">
+    <link rel="stylesheet" href="./estilo.css">
+    <script src="./pokedex.js"></script>
+</head>
+<body>    
+    <div id="pokedex">
+        <!-- Izquierdo -->
+        <div id="left">
+          <div id="logo"></div>
+          <div id="bg_curve1_left"></div>
+          <div id="bg_curve2_left"></div>
+          <div id="curve1_left">
+            <div id="buttonGlass">
+              <div id="reflect"> </div>
+            </div>
+            <div id="miniButtonGlass1"></div>
+            <div id="miniButtonGlass2"></div>
+            <div id="miniButtonGlass3"></div>
+          </div>
+          <div id="curve2_left">
+            <div id="junction">
+              <div id="junction1"></div>
+              <div id="junction2"></div>
+            </div>
+          </div>
+          <!-- Pantalla blanca -->
+          <div id="screen">
+            <div id="topPicture">
+              <div id="buttontopPicture1"></div>
+              <div id="buttontopPicture2"></div>
+            </div>
+
+            <div id="picture">
+              <h1 id="pokeNameA"> Pokemon</h1> <!-- Nombre del Pokemon -->
+              <img src="img/pokebola.png" alt="Pokemon" id="pokeImg" width="150px"><br>
+            </div>
+
+            <div id="buttonbottomPicture"></div>
+            <h2 id="pokeId" ></h2> <!-- Número del Pokemon -->
+                
+            <div id="speakers">
+              <div class="sp"></div>
+              <div class="sp"></div>
+              <div class="sp"></div>
+              <div class="sp"></div>
+            </div>
+
+          </div>
+
+          <button class="bigbluebutton" onclick="fetchPokemon()">Ver</button> <!-- Boton Buscar -->                   
+
+          <div id="barbutton1"></div>
+          <div id="barbutton2"></div>
+            <input type="text" placeholder="Nombre/Núm" id="pokeName" name="pokeName"><br>  <!-- Input Nombre o Numero-->    
+          
+      
+          <div id="cross">
+            <div id="leftcross">
+              <div id="leftT" ></div>
+            </div>
+            <div id="topcross">
+              <div id="upT"></div>
+            </div>
+            <div id="rightcross">
+              <div id="rightT"></div>
+            </div>
+            <div id="midcross">
+              <div id="midCircle"></div>
+            </div>
+            <div id="botcross">
+              <div id="downT"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Derecha -->
+        <div id="right">
+          <div id="stats">            
+            <p style="font-size: 16px;">Habilidad:<strong id="habilidad"></strong> </p>
+            <p style="font-size: 16px;">Tipo:<strong id="tipo"></strong> </p>
+          </div>
+          <div id="stats2" >
+            <div style="width: 100%;">
+            <div style="display: inline-block;width: 40%;">
+             <p>hp</p>
+             <p>attack</p>
+             <p>defense</p>
+             <p>special-attack</p>
+             <p>special-defense </p>
+             <p>speed</p>
+            </div>
+            <div style="display: inline-block;width: 10%;">
+              <p id="hp-p" >0</p>
+              <p id="attack-p">0</p>
+              <p id="defense-p">0</p>
+              <p id="special-attack-p">0</p>
+              <p id="special-defense-p">0</p>
+              <p id="speed-p" >0</p>
+             </div>
+            <div style="display: inline-block;width: 30%;">
+              <progress id="hp" value="0" max="150" style="width: 150%;"> 32% </progress>
+              <progress id="attack" value="0" max="150"style="width: 150%;">  32% </progress> 
+              <progress id="defense" value="0" max="150"style="width: 150%;">  32% </progress> 
+              <progress id="special-attack" value="0" max="150"style="width: 150%;">  32% </progress>
+              <progress id="special-defense" value="0" max="150"style="width: 150%;">  32% </progress>            
+              <progress id="speed" value="0" max="150"style="width: 150%;">  32% </progress>   
+            </div>
+          </div>
+          </div>
+          <div id="blueButtons1">
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+          </div>
+          <div id="blueButtons2">
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+          </div>
+          <div id="miniButtonGlass4"></div>
+          <div id="miniButtonGlass5"></div>
+          <div id="barbutton3"></div>
+          <div id="barbutton4"></div>
+           <!-- Altura -->
+          <div id="yellowBox1">
+            <h1>Altura:</h1>
+            <h3 id="pokeAltura"></h3>
+          </div>
+          <!-- Peso -->
+          <div id="yellowBox2">
+            <h1>Peso:</h1>
+            <h3 id="pokePeso"></h3>
+          </div>
+          <div id="bg_curve1_right"></div>
+          <div id="bg_curve2_right"></div>
+          <div id="curve1_right"></div>
+          <div id="curve2_right"></div>
+        </div>
+      </div>
+</body>
+<footer>
+ 
+</footer>
+</html>
